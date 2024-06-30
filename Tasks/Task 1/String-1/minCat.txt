@@ -1,0 +1,11 @@
+public String minCat(String a, String b) {
+  if(a.length()<b.length()){
+    int n=a.length();
+    return a+b.substring(b.length()-n);
+  }
+  else if(a.length()>b.length()){
+    int n=b.length();
+    return a.substring(a.length()-n)+b;
+  }
+  return "";
+}
