@@ -1,0 +1,18 @@
+public String zipZap(String str) {
+  String s="";
+  int i=0;
+  if(str.length()<3){
+    return str;
+  }
+  while(i<str.length()){
+    if(i<str.length()-2 && str.charAt(i)=='z' && str.charAt(i+2)=='p'){
+      s=s+"z"+"p";
+      i=i+3;
+    }
+    else{
+      s=s+str.charAt(i);
+      i++;
+    }
+  }
+  return s;
+}

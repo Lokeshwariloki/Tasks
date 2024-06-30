@@ -1,0 +1,10 @@
+public String getSandwich(String str) {
+  int f=str.indexOf("bread");
+  int l=str.lastIndexOf("bread");
+  String s="";
+  for(int i=f+5;i<l;i++){
+    s=s+str.charAt(i);
+  }
+  return s;
+}
+

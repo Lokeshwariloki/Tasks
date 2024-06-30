@@ -1,0 +1,15 @@
+public String withoutString(String base, String remove) {
+  String s="";
+  int i=0;
+  while(i<=base.length()-remove.length()){
+    if(base.substring(i,i+remove.length()).equalsIgnoreCase(remove)){
+      i=i+remove.length();
+    }
+    else{
+      s=s+base.charAt(i);
+      i++;
+    }
+  }
+  s=s+base.substring(i);
+  return s;
+}

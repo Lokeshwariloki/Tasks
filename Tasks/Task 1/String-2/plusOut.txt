@@ -1,0 +1,15 @@
+public String plusOut(String str, String word) {
+  String s="";
+  int i=0;
+  while(i<str.length()){
+    if(i<=str.length()-word.length() && str.substring(i,i+word.length()).equals(word)){
+      s=s+word;
+      i=i+word.length();
+    }
+    else{
+      s=s+"+";
+      i=i+1;
+    }
+  }
+  return s;
+}

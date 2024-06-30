@@ -1,0 +1,13 @@
+public boolean xyzMiddle(String str) {
+  int n=str.length();
+  for(int i=0;i<str.length()-2;i++){
+    if(str.substring(i,i+3).equals("xyz")){
+      int rightlen=n-(i+3);
+      int leftlen=i;
+      if(Math.abs(rightlen-leftlen)<=1){
+        return true;
+      }
+    }
+  }
+  return false;
+}
