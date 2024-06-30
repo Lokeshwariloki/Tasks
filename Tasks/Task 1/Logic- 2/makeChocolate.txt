@@ -1,0 +1,11 @@
+public int makeChocolate(int small, int big, int goal) {
+  int len=goal/5;
+  if(big>len){
+    big=len;
+  }
+  int weight=goal-(big*5);
+  if(weight<=small){
+    return weight;
+  }
+  return -1;
+}

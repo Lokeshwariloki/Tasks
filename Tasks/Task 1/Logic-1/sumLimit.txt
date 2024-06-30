@@ -1,0 +1,9 @@
+public int sumLimit(int a, int b) {
+  int c=a+b;
+  String s=String.valueOf(c);
+  String n=String.valueOf(a);
+  if(s.length()>n.length()){
+    return a;
+  }
+  return c;
+}

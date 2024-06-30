@@ -1,0 +1,6 @@
+public int sortaSum(int a, int b) {
+  if(a+b>9 && a+b<20){
+    return 20;
+  }
+  return a+b;
+}

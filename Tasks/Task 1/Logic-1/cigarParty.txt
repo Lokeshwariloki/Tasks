@@ -1,0 +1,9 @@
+public boolean cigarParty(int cigars, boolean isWeekend) {
+  if(cigars>=40 && cigars<=60 && (isWeekend==true || isWeekend==false)){
+    return true;
+  }
+  else if(cigars>60 && isWeekend==true){
+    return true;
+  }
+  return false;
+}

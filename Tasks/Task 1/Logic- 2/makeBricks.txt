@@ -1,0 +1,11 @@
+public boolean makeBricks(int small, int big, int goal) {
+  int bricks=goal/5;
+  if(big<bricks){
+    bricks=big;
+  }
+  int length=goal-(bricks*5);
+  if(length<=small){
+    return true;
+  }
+  return false;
+}

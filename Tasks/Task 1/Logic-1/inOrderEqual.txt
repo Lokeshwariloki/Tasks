@@ -1,0 +1,9 @@
+public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+  if(a<b && b<c && equalOk==false){
+    return true;
+  }
+  if(a<=b && b<=c && equalOk==true){
+    return true;
+  }
+  return false;
+}
