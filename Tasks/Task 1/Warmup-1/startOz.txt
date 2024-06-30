@@ -1,0 +1,12 @@
+public String startOz(String str) {
+  if(str.startsWith("oz",0)){
+    return "oz";
+  }
+  else if(str.startsWith("o",0)){
+    return "o";
+  }
+  else if(str.startsWith("z",1)){
+    return "z";
+  }
+  return "";
+}

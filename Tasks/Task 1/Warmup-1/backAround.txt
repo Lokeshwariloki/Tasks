@@ -1,0 +1,8 @@
+public String backAround(String str) {
+  if(str.length()<2){
+    return str+str+str;
+  }
+  else{
+    return str.substring(str.length()-1,str.length())+str.substring(0,str.length())+str.substring(str.length()-1,str.length());
+  }
+}
