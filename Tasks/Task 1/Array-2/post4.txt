@@ -1,0 +1,14 @@
+public int[] post4(int[] nums) {
+  int last=-1;
+  for(int i=0;i<nums.length;i++){
+    if(nums[i]==4){
+      last=i;
+    }
+  }
+  int count=nums.length-last-1;
+  int arr[]=new int[count];
+  for(int i=last+1;i<nums.length;i++){
+    arr[i-last-1]=nums[i];
+  }
+  return arr;
+}

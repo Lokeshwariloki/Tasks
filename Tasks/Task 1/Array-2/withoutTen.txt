@@ -1,0 +1,15 @@
+public int[] withoutTen(int[] nums) {
+  int start=0;
+  int end=nums.length-1;
+  int arr[]=new int[nums.length];
+  for(int i=0;i<nums.length;i++){
+    if(nums[i]==10){
+      nums[i]=0;
+      arr[end--]=nums[i];
+    }
+    else{
+      arr[start++]=nums[i];
+    }
+  }
+  return arr;
+}
