@@ -1,0 +1,7 @@
+public String noX(String str) {
+  if(str.length()==0){
+    return str;
+  }
+  String character=str.charAt(0)=='x'?"":String.valueOf(str.charAt(0));
+  return character+noX(str.substring(1));
+}

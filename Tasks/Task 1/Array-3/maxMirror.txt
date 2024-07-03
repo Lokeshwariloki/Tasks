@@ -1,0 +1,18 @@
+public int maxMirror(int[] nums) {
+  if(nums.length==1){
+    return 1;
+  }
+  int max=0;
+  for(int k=0;k<nums.length-1;k++){
+    for(int l=nums.length-1;l>=0;l--){
+      int count=0,i=k,j=l;
+      while(i<=nums.length-1 && j>=0 && nums[i]==nums[j]){
+        count++;
+        i++;
+        j--;
+      }
+      max=Math.max(max,count);
+    }
+  }
+  return max;
+}

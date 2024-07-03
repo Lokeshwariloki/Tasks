@@ -1,0 +1,14 @@
+public boolean linearIn(int[] outer, int[] inner) {
+  int innerLength=0,outerLength=0;
+  while(innerLength<inner.length && outerLength<outer.length){
+    if(inner[innerLength]==outer[outerLength]){
+      innerLength++;
+    }
+    outerLength++;
+  }
+  if(inner.length==innerLength){
+    return true;
+  }
+  return false;
+  
+}

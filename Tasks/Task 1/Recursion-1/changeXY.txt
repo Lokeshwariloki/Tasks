@@ -1,0 +1,7 @@
+public String changeXY(String str) {
+  if(str.length()==0){
+    return str;
+  }
+  char character=str.charAt(0)=='x'?'y':str.charAt(0);
+  return character+changeXY(str.substring(1));
+}
