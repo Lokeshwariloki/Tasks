@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        int num = 3;
+        int[][] matrix={{1,2,3},
+                        {4,5,6},
+                        {7,8,9}};
+        int n=matrix.length;
+        int[][] rotated=new int[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                rotated[i][j]=matrix[j][i];
+            }
+        }
+        for(int i=0;i<n/2;i++){
+            for(int j=0;j<n;j++){
+                int temp=rotated[i][j];
+                rotated[i][j]=rotated[n-i-1][j];
+                rotated[n-i-1][j]=temp;
+            }
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                System.out.print(rotated[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}

@@ -1,0 +1,19 @@
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        System.out.println("Bitwise 'and' for a and b is: ");
+        System.out.println(a&b); //bitwise and operator
+        System.out.println("Bitwise 'or' for a and b is: ");
+        System.out.println(a|b); //bitwise or operator
+        System.out.println("Bitwise 'xor' for a and b is: ");
+        System.out.println(a^b); //bitwise xor operator
+        System.out.println("Bitwise 'not' for a is: ");
+        System.out.println(~a); //bitwise (not or compliment) operator
+        System.out.println("Bitwise 'left shift' for a is: ");
+        System.out.println(a<<2); //bitwise left shift operator
+        System.out.println("Bitwise 'right shift' for b is: ");
+        System.out.println(b>>2); //bitwise right shift operator
+    }
+}

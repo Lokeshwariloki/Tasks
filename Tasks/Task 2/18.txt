@@ -1,0 +1,47 @@
+public class Main{
+    public static void main(String[] args) {
+        int arr[]={13,2,4,15,12,10,5};
+        int oddarr[]=new int[(arr.length+1)/2];
+        int evenarr[]=new int[arr.length/2];
+        int j=0;
+        for(int i=0;i<arr.length;i=i+2){
+            oddarr[j++]=arr[i];
+        }
+        int k=0;
+        for(int i=1;i<arr.length;i=i+2){
+            evenarr[k++]=arr[i];
+        }
+        for(int i=0;i<j;i++){
+            for(int next=i+1;next<j;next++){
+                if(oddarr[i]<oddarr[next]){
+                    int temp=oddarr[i];
+                    oddarr[i]=oddarr[next];
+                    oddarr[next]=temp;
+                }
+            }
+        }
+        for(int i=0;i<k;i++){
+            for(int next=i+1;next<k;next++){
+                if(evenarr[i]>evenarr[next]){
+                    int temp=evenarr[i];
+                    evenarr[i]=evenarr[next];
+                    evenarr[next]=temp;
+                }
+            }
+        }
+        int pos=0;
+        int w=0;
+        while(pos<arr.length) {
+            if(w<j) {
+                arr[pos++]=oddarr[w];
+            }
+            if(w<k) {
+                arr[pos++]=evenarr[w];
+            }
+            w++;
+        }
+        for (int num:arr) {
+            System.out.print(num + " ");
+        }
+    }
+}

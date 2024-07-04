@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        int a=1,b=-3,c=2;
+        int d=b*b-4*a*c;
+        if(d>0){
+            double root1=(-b+Math.sqrt(d))/(2*a);
+            double root2=(-b-Math.sqrt(d))/(2*a);
+            System.out.println("The roots are: "+root1+" and "+root2);
+            System.out.println(a*root1*root1+b*root1+c);
+            System.out.println(a*root2*root2+b*root2+c);
+        }
+        else if(d==0){
+            double root=-b/(2*a);
+            System.out.print(a*root*root+b*root+c);
+            System.out.println("The roots are: "+root);
+        }
+        else{
+            double real=-b/(2*a);
+            double complex=Math.sqrt(-d)/(2*a);
+            System.out.println("The roots are: "+real+" and "+complex);
+            System.out.println(a*real*real+b*real+c);
+            System.out.println(a*complex*complex+b*complex+c);
+        }
+    }
+}

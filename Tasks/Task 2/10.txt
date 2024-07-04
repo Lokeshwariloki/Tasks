@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        System.out.print(reverse(str));
+    }
+    public static String reverse(String s){
+        int space=s.indexOf(' ');
+        if(space==-1){
+            return s;
+        }
+        return reverse(s.substring(space+1))+" "+s.substring(0,space);
+    }
+}

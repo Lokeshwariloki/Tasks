@@ -1,0 +1,13 @@
+public class Main{
+    public static void main(String args[]){
+        int n=5;
+        int sum=0,i=0,value=0;
+        while(i<n){
+            int num=value*10+1;
+            sum=sum+num;
+            value=num;
+            i++;
+        }
+        System.out.print(sum);
+    }
+}
